@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPager">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.onboarding_alternate.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.onboarding_alternate.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPager"
+        android:name="com.example.onboarding_alternate.ViewPager"
+        android:label="fragment_viewpager"
+        tools:layout="@layout/fragment_viewpager" />
+    <fragment
+        android:id="@+id/firstSlide"
+        android:name="com.example.onboarding_alternate.FirstSlide"
+        android:label="fragment_first_slide"
+        tools:layout="@layout/fragment_first_slide" >
+        <action
+            android:id="@+id/action_firstSlide_to_secondSlide"
+            app:destination="@id/secondSlide" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondSlide"
+        android:name="com.example.onboarding_alternate.SecondSlide"
+        android:label="fragment_second_slide"
+        tools:layout="@layout/fragment_second_slide" >
+        <action
+            android:id="@+id/action_secondSlide_to_fifthSlide"
+            app:destination="@id/fifthSlide" />
+        <action
+            android:id="@+id/action_secondSlide_to_thirdSlide"
+            app:destination="@id/thirdSlide" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdSlide"
+        android:name="com.example.onboarding_alternate.ThirdSlide"
+        android:label="fragment_third_slide"
+        tools:layout="@layout/fragment_third_slide" >
+        <action
+            android:id="@+id/action_thirdSlide_to_fourthSlide"
+            app:destination="@id/fourthSlide" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthSlide"
+        android:name="com.example.onboarding_alternate.FourthSlide"
+        android:label="fragment_fourth_slide"
+        tools:layout="@layout/fragment_fourth_slide" >
+        <action
+            android:id="@+id/action_fourthSlide_to_fifthSlide"
+            app:destination="@id/fifthSlide" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthSlide"
+        android:name="com.example.onboarding_alternate.FifthSlide"
+        android:label="fragment_fifth_slide"
+        tools:layout="@layout/fragment_fifth_slide" />
+</navigation>
